@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reftek - Coming Soon</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: #1a1a1a;
+            background-color: #ffffff;
+            line-height: 1.6;
+        }
+
+        header {
+            padding: 20px 0;
+            border-bottom: 1px solid #e5e5e5;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-left: 40px;
+            padding-right: 40px;
+        }
+
+        .logo-container {
+            max-width: 280px;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 40px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: #1a1a1a;
+        }
+
+        p {
+            font-size: 1.25rem;
+            margin-bottom: 40px;
+            color: #4a4a4a;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 15px 35px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .btn-orange {
+            background-color: #F97316;
+            color: white;
+        }
+
+        .btn-blue {
+            background-color: #0891B2;
+            color: white;
+        }
+
+        .btn-outline-orange {
+            background-color: transparent;
+            color: #F97316;
+            border: 2px solid #F97316;
+        }
+
+        .btn-outline-blue {
+            background-color: transparent;
+            color: #0891B2;
+            border: 2px solid #0891B2;
+        }
+
+        .features {
+            margin-top: 80px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+            text-align: left;
+        }
+
+        .feature {
+            padding: 30px;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+            border-left: 4px solid #0891B2;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .feature:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 4px 12px rgba(8, 145, 178, 0.15);
+        }
+
+        .feature h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #0891B2;
+        }
+
+        .feature p {
+            margin: 0;
+            font-size: 1rem;
+        }
+
+        footer {
+            text-align: center;
+            #padding: 40px;
+            background-color: #f9f9f9;
+            #margin-top: 80px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin-top: 0;
+        }
+
+        footer p {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+
+            main {
+                padding: 40px 20px;
+            }
+
+            .button-group {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <svg width="280" height="80" viewBox="0 0 280 80" xmlns="http://www.w3.org/2000/svg">
+                <g transform="translate(0, 20)">
+                    <!-- Soccer field icon -->
+                    <rect x="3" y="3" width="38" height="34" rx="2" fill="none" stroke="#047857" stroke-width="2"/>
+                    <rect x="3" y="10" width="8" height="20" fill="none" stroke="#047857" stroke-width="1.5"/>
+                    <rect x="33" y="10" width="8" height="20" fill="none" stroke="#047857" stroke-width="1.5"/>
+                    <rect x="3" y="14" width="4" height="12" fill="none" stroke="#047857" stroke-width="1.5"/>
+                    <rect x="37" y="14" width="4" height="12" fill="none" stroke="#047857" stroke-width="1.5"/>
+                    <line x1="22" y1="3" x2="22" y2="37" stroke="#047857" stroke-width="2"/>
+                    <circle cx="22" cy="20" r="6" fill="none" stroke="#047857" stroke-width="1.5"/>
+                </g>
+                <text x="48" y="55" font-family="Arial, sans-serif" font-size="42" font-weight="600" fill="#1a1a1a">Reftek</text>
+            </svg>
+        </div>
+    </header>
+
+    <main>
+        <h1>Referee Management Made Simple</h1>
+        <p>We're building the platform that empowers referees, assignors, and leagues to work together seamlessly. Coming soon.</p>
+        
+        <div class="button-group">
+            <a href="mailto:tim@reftek.us" class="btn btn-orange">Contact</a>
+        </div>
+
+        <div class="features">
+            <div class="feature">
+                <h3>Streamlined Scheduling</h3>
+                <p>Effortlessly manage referee assignments and game schedules all in one place.</p>
+            </div>
+            <div class="feature">
+                <h3>Real-Time Updates</h3>
+                <p>Stay connected with instant notifications and live schedule changes.</p>
+            </div>
+            <div class="feature">
+                <h3>Smart Analytics</h3>
+                <p>Track performance, availability, and assignments with powerful reporting tools.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Reftek. All rights reserved.</p>
+    </footer>
+</body>
+</html>
