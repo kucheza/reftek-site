@@ -150,6 +150,78 @@
             color: #666;
         }
 
+        .faq-section {
+          max-width: 900px;
+          margin: 40px auto;
+          padding: 0 24px;
+        }
+        
+        .faq-section h2 {
+          font-size: 1.75rem;
+          font-weight: 700;
+          margin-bottom: 24px;
+          color: #333;
+        }
+        
+        .faq-item {
+          border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .faq-item:first-of-type {
+          border-top: 1px solid #e0e0e0;
+        }
+        
+        .faq-question {
+          width: 100%;
+          background: none;
+          border: none;
+          padding: 18px 40px 18px 0;
+          font-size: 1.05rem;
+          font-weight: 600;
+          color: #0097a7;
+          text-align: left;
+          cursor: pointer;
+          position: relative;
+          font-family: inherit;
+        }
+        
+        .faq-question::after {
+          content: '+';
+          position: absolute;
+          right: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          font-size: 1.5rem;
+          font-weight: 300;
+          color: #999;
+          transition: transform 0.2s ease;
+        }
+        
+        .faq-item.open .faq-question::after {
+          content: '−';
+        }
+        
+        .faq-question:hover {
+          color: #00838f;
+        }
+        
+        .faq-answer {
+          max-height: 0;
+          overflow: hidden;
+          transition: max-height 0.3s ease, padding 0.3s ease;
+        }
+        
+        .faq-item.open .faq-answer {
+          max-height: 500px;
+        }
+        
+        .faq-answer p {
+          margin: 0 0 16px 0;
+          padding: 0 0 18px 0;
+          font-size: 0.95rem;
+          line-height: 1.6;
+          color: #555;
+        }
         @media (max-width: 768px) {
             h1 {
                 font-size: 2rem;
@@ -205,7 +277,7 @@
         <div class="features">
             <div class="feature">
                 <h3>Get Certified</h3>
-                <p>New Referess — Register for referee certification training courses.</p><p>
+                <p>New Referees — Register for referee certification training courses.</p><p>
         <a href="https://www.kansasreferee.org/newofficials" target="_blank" rel="noopener">Kansas Training</a><br>
                 <a href="https://mrdp.org/new_referees" target="_blank" rel="noopener">Missouri Training</a></p>
             </div>
@@ -222,11 +294,67 @@
                 <!-- https://www.amazon.com/Vicloon-Digital-Stopwatch-Training-Swimming/dp/B0B5WZGL5L -->
             </div>
         </div>
-    
+
+
+        <div class="faq-section">
+          <h2>Referee Pay &amp; Taxes FAQ</h2>
+        
+          <div class="faq-item">
+            <button class="faq-question">I didn't get a W-2 or 1099. Can I get a tax refund?</button>
+            <div class="faq-answer">
+              <p>A tax refund happens when more tax was withheld from your pay than you actually owed. Since no taxes are withheld from your referee checks, there is nothing to refund. The 1099 (or W-2) does not generate a refund — it simply reports income to the IRS.</p>
+            </div>
+          </div>
+        
+          <div class="faq-item">
+            <button class="faq-question">I made less than $600. Do I still have to report it?</button>
+            <div class="faq-answer">
+              <p>Yes. The $600 threshold only determines whether the payer is required to send you a 1099. Regardless of the amount, all income must be reported on your tax return.</p>
+            </div>
+          </div>
+        
+          <div class="faq-item">
+            <button class="faq-question">Will I owe taxes on my referee income?</button>
+            <div class="faq-answer">
+              <p>Possibly. If your total net self-employment income for the year is $400 or more, you are required to pay self-employment tax (Social Security and Medicare) in addition to any regular income tax. The SE tax rate is 15.3%, but it's applied to 92.35% of your net earnings — not the full amount. The IRS does this to put you on equal footing with W-2 employees, whose employer-paid half of FICA isn't counted as taxable income. So the effective SE tax rate is about 14.1%. Note: $400 is not a deduction — once you hit that threshold, the full amount is subject to SE tax.</p>
+            </div>
+          </div>
+        
+          <div class="faq-item">
+            <button class="faq-question">What's the difference between a W-2 and a 1099?</button>
+            <div class="faq-answer">
+              <p>A W-2 is for employees and shows wages earned plus taxes withheld. A 1099-NEC is for independent contractors and reports total payments made to you — with no taxes withheld. As a referee, you should expect a 1099-NEC (if applicable), not a W-2.</p>
+            </div>
+          </div>
+        
+          <div class="faq-item">
+            <button class="faq-question">Can I deduct any expenses?</button>
+            <div class="faq-answer">
+              <p>Yes! As an independent contractor, you can deduct ordinary and necessary business expenses on Schedule C. Common referee deductions include uniforms, whistles, equipment, mileage to and from games, referee association dues, and training or certification fees. Keep receipts and records of all expenses.</p>
+            </div>
+          </div>
+        
+          <div class="faq-item">
+            <button class="faq-question">Am I an employee or an independent contractor?</button>
+            <div class="faq-answer">
+              <p>When you officiate games for a city or league, you are typically classified as an independent contractor, not an employee. This means no taxes are withheld from your game checks — you receive the full amount for each game.</p>
+            </div>
+          </div>
+        </div>
+        
     </main>
 
     <footer>
         <p>&copy; 2026 Reftek, LLC. All rights reserved.</p>
     </footer>
+
+        <script>
+        document.querySelectorAll('.faq-question').forEach(function(btn) {
+          btn.addEventListener('click', function() {
+            this.parentElement.classList.toggle('open');
+          });
+        });
+    </script>
+    
 </body>
 </html>
