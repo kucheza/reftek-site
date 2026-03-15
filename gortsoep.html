@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gortsoep Card</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #f5f0e8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 40px;
+  }
+
+  .card {
+    width: 5in;
+    height: 3.5in;
+    background: #1a1611;
+    color: #f5f0e8;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0.5in 0.6in;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .card::before {
+    content: '';
+    position: absolute;
+    inset: 8px;
+    border: 1px solid rgba(193, 154, 91, 0.4);
+    pointer-events: none;
+  }
+
+  .card::after {
+    content: '';
+    position: absolute;
+    inset: 12px;
+    border: 1px solid rgba(193, 154, 91, 0.15);
+    pointer-events: none;
+  }
+
+  .ornament-top, .ornament-bottom {
+    color: #c19a5b;
+    font-size: 18px;
+    letter-spacing: 12px;
+    opacity: 0.6;
+  }
+
+  .ornament-top { margin-bottom: 16px; }
+  .ornament-bottom { margin-top: 16px; }
+
+  .title {
+    font-family: 'Playfair Display', serif;
+    font-size: 52px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: #f5f0e8;
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+
+  .pronunciation {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 16px;
+    font-weight: 300;
+    font-style: italic;
+    color: #c19a5b;
+    letter-spacing: 2px;
+    margin-bottom: 18px;
+  }
+
+  .divider {
+    width: 60px;
+    height: 1px;
+    background: #c19a5b;
+    margin-bottom: 18px;
+    opacity: 0.6;
+  }
+
+  .subtitle {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 17px;
+    font-weight: 400;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #d4c4a8;
+    line-height: 1.5;
+  }
+
+  .proost {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 15px;
+    color: #c19a5b;
+    margin-top: 20px;
+    letter-spacing: 1px;
+  }
+
+  @media print {
+    body {
+      background: white;
+      padding: 0;
+      min-height: auto;
+    }
+    .card {
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+  }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="ornament-top">&#9830; &#9830; &#9830;</div>
+    <div class="title">Gortsoep</div>
+    <div class="pronunciation">say "hort-soop"</div>
+    <div class="divider"></div>
+    <div class="subtitle">Dutch Farmhouse<br>Barley Soup</div>
+    <div class="proost">Proost!</div>
+    <div class="ornament-bottom">&#9830; &#9830; &#9830;</div>
+  </div>
+</body>
+</html>
